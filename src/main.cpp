@@ -134,7 +134,7 @@ void setup() {
 	Serial.println(WiFi.localIP());
 
 	ESPUI.button("Power Button", &buttonCallback, ControlColor::Peterriver, "Press");
-	ESPUI.slider("LED Brightness", &sliderCallback, ControlColor::Emerald, 50, 0, 100);
+	ESPUI.slider("LED Brightness", &sliderCallback, ControlColor::Emerald, 100, 0, 100);
 	cpuLabelID = ESPUI.label("CPU Usage",ControlColor::Peterriver,"0%");
 	memLabelID = ESPUI.label("Memory Usage",ControlColor::Peterriver,"0%");
 	dskLabelID = ESPUI.label("Disk Usage",ControlColor::Peterriver,"0%");
@@ -191,14 +191,6 @@ void loop() {
 		debounceDelayActive = false;
 	}
 
-	// static long oldMillis = 0;
-	// if(millis() - oldMillis > 500){
-	// 	String str = String((int)random(0, 100));
-	// 	str += " %";
-	// 	ESPUI.print(cpuLabelID,str);
-	// 	oldMillis = millis();
-	// }
-
 	if(Serial.available()){
 		String text = Serial.readStringUntil('\n');
 		int index = text.indexOf(':');
@@ -218,5 +210,3 @@ void loop() {
 		}
 	}
 }
-
-//TO-Do: Replace delay function.
