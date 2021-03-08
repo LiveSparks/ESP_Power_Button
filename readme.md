@@ -1,23 +1,16 @@
 <!-- PROJECT LOGO -->
-<br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="https://www.flaticon.com/svg/vstatic/svg/4092/4092078.svg?token=exp=1615192142~hmac=a830bf93d96b27af1d4e0ab1c48ab9d3" alt="Logo" width="80" height="80">
+  <a href="https://github.com/LiveSparks/ESP_Power_Button">
+    <img src="https://i.imgur.com/VdzvRhn.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">ESP PC Power Button</h3>
 
   <p align="center">
     A Wi-Fi enabled replacement for the broken Power Button of my PC
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">Watch The Video</a>
+    <a href="https://github.com/LiveSparks/ESP_Power_Button">Watch The Video</a>
   </p>
 </p>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -41,6 +34,7 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -48,7 +42,9 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-<p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/C6GKLckhQSw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=C6GKLckhQSw"><img src="https://img.youtube.com/vi/C6GKLckhQSw/0.jpg" alt="YouTube"></a>
+</div>
 
 Replace/Enhance the Power button of your PC with the ESP8266. No need to lift your arms to reach for the power button button of your PC when you can press it from the comfort of your phone. You can control more than just power with the included macro pad.
 
@@ -84,7 +80,7 @@ I would recommend using PlatformIO. Instructions on how to install it are [here]
 
 1. Clone/Download the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/LiveSparks/ESP_Power_Button
    ```
 2. Compile & Upload
 	* PlatformIO
@@ -148,3 +144,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Your Name - [@LiveSparksYT](https://twitter.com/LiveSparksYT) - livesparking@gmail.com
 
 Project Link: [https://github.com/LiveSparks/ESP_Power_Button](https://github.com/LiveSparks/ESP_Power_Button)
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+* Logo icon made by [photo3idea-studio](https://www.flaticon.com/authors/photo3idea-studio)
