@@ -7,7 +7,7 @@
   <h3 align="center">ESP PC Power Button</h3>
 
   <p align="center">
-    A Wi-Fi enabled replacement for the broken Power Button of my PC
+    A Wi-Fi enabled replacement for the broken Power Button of my PC.
     <a href="https://github.com/LiveSparks/ESP_Power_Button">Watch The Video</a>
   </p>
 </p>
@@ -16,21 +16,24 @@
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
+    <li><a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
+    <li><a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li> <a href="#schematics">Schematics</a></li>
+    <li><a href="#schematics">Schematics</a></li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#autohotkey">AutoHotKey</a>
+        <ul>
+            <li><a href="#some-examples">Some Examples</a></li>
+        </ul>
+    </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -87,19 +90,26 @@ I would recommend using PlatformIO. Instructions on how to install it are [here]
 		1. Open the repository folder in VS Code and upload after PlatformIO has loaded.
 	* Arduino IDE
 		1. In the source folder, rename `main.cpp` to `main.ino`.
-		2. Open `main.ino` file in arduino IDE and upload.
+		2. Open `main.ino` file in arduino IDE.
+        3. Comment out `#include <Arduino.h>`.
+        4. Connect the ESP Board and Upload.
 
 
 ## Schematic
+
 ![Schematic](https://i.imgur.com/PU3bBpa.png)
+
 The Above diagram is made with the Wemos D1 mini in mind. Check to make sure that you use the correct GPIOs is you you are using a different board.
 
 The USB headers on motherboards have the following layout:
 
 ![USB 2.0 Header on the motherboard.](https://i.imgur.com/NKY97qF.jpg)
+
 You can also just connect to a external USB port directly if you want.
 
 Regardless of whether you are connecting to the USB or not, you need to make sure that the ground of your PC and the ESP are connected together.
+
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -114,9 +124,50 @@ The program works as is and there is no need to enter any WiFi Credentials in th
 
 You should be able to control the PC Power and and LED brightness from this page but the system stats would remain blank. 
 
+
 ### Macro Pad & System Stats
+
 To see the system stats on the Web UI and make use of the macro pad follow the instructions on [this]() page.
 
+The buttons on the keypad are F13 through F18 so there is never any possibility of conflict with a real keyboard. You can also modify the project to include 6 more keys so you have F13-F24 for 12 total keys. No modifications of the PC sided software are required for this.
+
+
+## AutoHotKey
+
+[AutoHotKey](https://www.autohotkey.com/) is a very powerful piece of automation software that allows you to define custom desktop wide hotkeys that can do complex tasks based on context.
+
+### Some Examples
+
+* Map one key to a another keybind. F13 -> Ctrl+C
+    ```ahk
+    F13::^c
+    ```
+* Open a web page
+    ```ahk
+    F17::Run chrome.exe "http://192.168.29.3/" " --new-window "
+    ```
+* Context Specific actions
+    ```ahk
+    #IfWinActive Untitled - Notepad
+    !q::
+    MsgBox, You pressed ALT+Q in Notepad.
+    return
+
+    ; Any window that isn't Untitled - Notepad
+    #IfWinActive
+    !q::
+    MsgBox, You pressed ALT+Q in any window.
+    return
+    ```
+* Combine two keys together
+    ```ahk
+    F13 & F17::Media_Play_Pause
+    ```
+
+> ⚠ You can only combine two keys together.
+> ⚠ For some reason using keys of of the same coloum together doesn't work. If you can figure out the reason, please let me know.
+
+For more examples and in depth guides regarding AutoHotKey, visit their [documentations](https://www.autohotkey.com/docs/AutoHotkey.htm).
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -134,7 +185,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License.
 
 
 
