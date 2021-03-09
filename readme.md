@@ -8,7 +8,7 @@
 
   <p align="center">
     A Wi-Fi enabled replacement for the broken Power Button of my PC.
-    <a href="https://github.com/LiveSparks/ESP_Power_Button">Watch The Video</a>
+    <a href="https://youtu.be/Uo5vbjHSwwY">Watch The Video</a>
   </p>
 </p>
 
@@ -46,7 +46,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <div align="center">
-  <a href="https://www.youtube.com/watch?v=C6GKLckhQSw"><img src="https://img.youtube.com/vi/C6GKLckhQSw/0.jpg" alt="YouTube"></a>
+  <a href="https://www.youtube.com/watch?v=Uo5vbjHSwwY"><img src="https://img.youtube.com/vi/Uo5vbjHSwwY/0.jpg" alt="YouTube"></a>
 </div>
 
 Replace/Enhance the Power button of your PC with the ESP8266. No need to lift your arms to reach for the power button button of your PC when you can press it from the comfort of your phone. You can control more than just power with the included macro pad.
