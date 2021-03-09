@@ -53,6 +53,7 @@ Replace/Enhance the Power button of your PC with the ESP8266. No need to lift yo
 
 The project was made when the power button of my computer broke. I also wanted to add a few physical marco buttons and wanted to monitor some of the usage statistics remotely. This project is all that rolled into one.
 
+> ⚠ Requires the [WinSerial](https://github.com/LiveSparks/WinSerial) program for full functionality. Read [Macro Pad & System Stats](#macro-pad-&-system-stats) for more info.
 
 ### Built With
 * [Arduino](https://www.arduino.cc/)
@@ -64,7 +65,7 @@ The project was made when the power button of my computer broke. I also wanted t
 <!-- GETTING STARTED -->
 ## Getting Started
 
-If you wish to replicate the project then you can either just grab the binary from the [releases page]() and flash to your board with the [flash tool](https://www.espressif.com/en/support/download/other-tools).
+If you wish to replicate the project then you can either just grab the binary from the [releases page](https://github.com/LiveSparks/ESP_Power_Button/releases) and flash to your board with the [flash tool](https://www.espressif.com/en/support/download/other-tools).
 **OR**
 if you wish to make some changes to the code then follow the following steps:
 
@@ -127,7 +128,7 @@ You should be able to control the PC Power and and LED brightness from this page
 
 ### Macro Pad & System Stats
 
-To see the system stats on the Web UI and make use of the macro pad follow the instructions on [this]() page.
+To see the system stats on the Web UI and make use of the macro pad follow the instructions on [this](https://github.com/LiveSparks/WinSerial) page.
 
 The buttons on the keypad are F13 through F18 so there is never any possibility of conflict with a real keyboard. You can also modify the project to include 6 more keys so you have F13-F24 for 12 total keys. No modifications of the PC sided software are required for this.
 
@@ -165,7 +166,8 @@ The buttons on the keypad are F13 through F18 so there is never any possibility 
     ```
 
 > ⚠ You can only combine two keys together.
-> ⚠ For some reason using keys of of the same coloum together doesn't work. If you can figure out the reason, please let me know.
+
+> ⚠ For some reason using keys of the same coloum together doesn't work. If you can figure out the reason, please let me know.
 
 For more examples and in depth guides regarding AutoHotKey, visit their [documentations](https://www.autohotkey.com/docs/AutoHotkey.htm).
 
